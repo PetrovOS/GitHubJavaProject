@@ -62,12 +62,16 @@ public class HW73 {
         }
         return result;
     }
+
+    //    Task 6
     public static String abbrevName(String name) {
         String[] fullName = name.split(" ");
         String firstName = fullName[0];
         String lastName = fullName[1];
         return (firstName.charAt(0) + "." + lastName.charAt(0)).toUpperCase();
     }
+
+    //    Task 7
     public static String highAndLow(String numbers) {
         String[] split = numbers.split(" ");
         Arrays.sort(split);
