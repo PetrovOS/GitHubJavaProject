@@ -73,8 +73,18 @@ public class HW73 {
 
     //    Task 7
     public static String highAndLow(String numbers) {
-        String[] split = numbers.split(" ");
-        Arrays.sort(split);
-        return split[0] + " " + split[split.length - 1];
+
+        String[] numbers1 = numbers.split(" ");
+        int[] arr = new int[numbers1.length];
+
+        for (int i = 0; i < numbers1.length; i++) {
+            arr[i] = Integer.valueOf(numbers1[i]);
+        }
+        Arrays.sort(arr);
+
+        int lowest = arr[0];
+        int high = arr[arr.length - 1];
+
+        return Integer.toString(high) + " " + Integer.toString(lowest);
     }
 }
