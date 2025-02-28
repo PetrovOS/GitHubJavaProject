@@ -55,5 +55,6 @@ public class Employee {
 
         System.out.println(employeesList[1].name);
         System.out.println(employeesList[1].getSalary(monthUtils.fallMonths));
+        System.out.println(valeraEmployee.getSalary(new Month[] {monthUtils.february, monthUtils.july}));
     }
 }
