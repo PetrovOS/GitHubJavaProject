@@ -14,8 +14,8 @@ public class MonthUtils {
   public static Month november = new Month("November", 30, 19);
   public static Month december = new Month("December", 31, 21);
 
-    public static Month[] winterMonths = new Month[] {december, january,february};
-    public static Month[] springMonths = new Month[] {march, april, may};
-    public static Month[] summerMonths = new Month[] {june, july, august};
-    public static Month[] fallMonths = new Month[] {september, october, november};
+  public static Month[] winterMonths = new Month[] {december, january,february};
+  public static Month[] springMonths = new Month[] {march, april, may};
+  public static Month[] summerMonths = new Month[] {june, july, august};
+  public static Month[] fallMonths = new Month[] {september, october, november};
 }

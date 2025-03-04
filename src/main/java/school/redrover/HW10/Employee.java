@@ -1,15 +1,14 @@
 package school.redrover.HW10;
+
+import school.redrover.HW9.Month;
+
 /*
 * Класс Employee должен иметь поля: имя, возраст, пол и ЗП в день.
 Имя и ЗП должны быть обязательными, остальные поля — нет.
 Класс должен иметь метод - getSalary(Month[] monthArray),
 * метод возвращает зарплату за те месяцы которые были переданы в качестве аргумента.
 
-Класс Manager должен иметь все то, что имеет Employee, и вдобавок,
-* хранить число подчиненных. Метод getSalary(Month[] monthArray)
-* должен учитывать количество подчиненных, и давать надбавку к зарплате в 1% за каждого подчиненного.
-
-Класс Director должен вести себя как Manager, но давать надбавку к зарплате в 3% за каждого подчиненного.
+* Класс Director должен вести себя как Manager, но давать надбавку к зарплате в 3% за каждого подчиненного.
 * */
 public class Employee {
     private String name;
@@ -28,7 +27,13 @@ public class Employee {
         this.sex = sex;
     }
 
-
+    public double getSalary(Month[] monthArray) {
+        double totalSalary = 0;
+        for(Month workDays : monthArray) {
+            totalSalary += getDailySalary() * workDays.getWorkDaysInMonth();
+        }
+        return totalSalary;
+    }
 
     public String getName() {
         return name;
