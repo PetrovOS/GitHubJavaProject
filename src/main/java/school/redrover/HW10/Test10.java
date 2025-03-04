@@ -13,5 +13,9 @@ public class Test10 {
         Manager mary = new Manager("Mary",35,"Female", 200,50);
 
         System.out.println(mary.getSalary(MonthUtils.fallMonths));
+
+        Director michael = new Director("Michael", 45, "Male", 400, 100);
+
+        System.out.println(michael.getSalary(MonthUtils.fallMonths));
     }
 }

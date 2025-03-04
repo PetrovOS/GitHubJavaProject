@@ -1,7 +1,6 @@
 package school.redrover.HW10;
 
 import school.redrover.HW9.Month;
-
 /*
 * Класс Manager должен иметь все то, что имеет Employee, и вдобавок,
  * хранить число подчиненных. Метод getSalary(Month[] monthArray)
