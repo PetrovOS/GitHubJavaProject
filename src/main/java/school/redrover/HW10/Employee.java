@@ -32,6 +32,14 @@ public class Employee {
         return totalSalary;
     }
 
+    public Manager advanceToManager(int numberOfSubordinates) {
+        return new Manager(getName(),getAge(),getSex(),getDailySalary(),numberOfSubordinates);
+    }
+
+    public Director advanceToDirector(int numberOfSubordinates) {
+        return new Director(getName(),getAge(),getSex(),getDailySalary(),numberOfSubordinates);
+    }
+
     public String getName() {
         return name;
     }
