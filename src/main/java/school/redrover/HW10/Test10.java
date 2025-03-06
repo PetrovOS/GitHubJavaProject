@@ -12,25 +12,25 @@ public class Test10 {
         Employee mary = new Employee("Mary", 200);
         Employee michael = new Employee("Michael", 400);
 
-        System.out.println("Employees salary: " + "\nJohn's salary: " + john.getSalary(MonthUtils.fallMonths));
-        System.out.println("Vasiliy salary: " + vasiliy.getSalary(MonthUtils.fallMonths));
-        System.out.println("Denis salary: " + denis.getSalary(MonthUtils.fallMonths));
-        System.out.println("Mary salary: " + mary.getSalary(MonthUtils.fallMonths));
-        System.out.println("Michael salary: " + michael.getSalary(MonthUtils.fallMonths));
+        System.out.println("Employees salary: " + "\nJohn's salary: " + john.getSalary(MonthUtils.FALL_MONTHS));
+        System.out.println("Vasiliy salary: " + vasiliy.getSalary(MonthUtils.FALL_MONTHS));
+        System.out.println("Denis salary: " + denis.getSalary(MonthUtils.FALL_MONTHS));
+        System.out.println("Mary salary: " + mary.getSalary(MonthUtils.FALL_MONTHS));
+        System.out.println("Michael salary: " + michael.getSalary(MonthUtils.FALL_MONTHS));
         System.out.println("=======================");
 
 
         Manager maryManager = mary.advanceToManager(50);
-        System.out.println("Managers salary: " + "\nManager Mary's salary: " + maryManager.getSalary(MonthUtils.fallMonths));
+        System.out.println("Managers salary: " + "\nManager Mary's salary: " + maryManager.getSalary(MonthUtils.FALL_MONTHS));
 
         Director michaelDirector = michael.advanceToDirector(52);
-        System.out.println("Director Michael's salary: " + michaelDirector.getSalary(MonthUtils.fallMonths));
+        System.out.println("Director Michael's salary: " + michaelDirector.getSalary(MonthUtils.FALL_MONTHS));
         System.out.println("=======================");
 
         // Task 2
         Employee[] totalEmployees = {john, vasiliy, denis, maryManager, michaelDirector};
 
-        double total = SalaryUtils.getTotalSalary(totalEmployees, MonthUtils.fallMonths);
+        double total = SalaryUtils.getTotalSalary(totalEmployees, MonthUtils.FALL_MONTHS);
         System.out.println("Total Company salary: " + total);
         System.out.println("=======================");
 

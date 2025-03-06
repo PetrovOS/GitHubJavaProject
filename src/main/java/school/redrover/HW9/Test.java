@@ -10,7 +10,7 @@ public class Test {
         Manager maryManager = mary.convertToManager(40);
 
         System.out.println(Employee.makeSummary(new Employee[] {john, mary, dima, angelina}));
-        System.out.println(mary.getSalary(MonthUtils.fallMonths));
-        System.out.println(maryManager.getSalary(MonthUtils.fallMonths));
+        System.out.println(mary.getSalary(MonthUtils.FALL_MONTHS));
+        System.out.println(maryManager.getSalary(MonthUtils.FALL_MONTHS));
     }
 }
