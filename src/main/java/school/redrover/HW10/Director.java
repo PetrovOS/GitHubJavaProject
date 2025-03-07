@@ -13,6 +13,7 @@ public class Director extends Manager {
 
     @Override
     public double getSalary(Month[] monthArray) {
-        return super.getSalary(monthArray) + (super.getSalary(monthArray) * getNumberOfSubordinates() / 100) * 3;
+        double employeeSalary = super.getSalary(monthArray);
+        return employeeSalary + (employeeSalary * getNumberOfSubordinates() / 100) * 3;
     }
 }
