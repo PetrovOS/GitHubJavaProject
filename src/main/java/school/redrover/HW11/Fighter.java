@@ -12,7 +12,7 @@ public class Fighter {
         this.damagePerAttack = damagePerAttack;
     }
 
-
+// Solution 1
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
         Fighter attacker = fighter1.name.equals(firstAttacker) ? fighter1 : fighter2;
         Fighter defender = fighter1 == attacker ? fighter2 : fighter1;
@@ -27,6 +27,35 @@ public class Fighter {
             defender = temp;
         }
         return attacker.name;
+    }
+
+    // Solution 2
+    public static String declareWinner1(Fighter fighter1, Fighter fighter2, String firstAttacker) {
+        if (fighter1.equals(firstAttacker)) {
+            while(true) {
+                fighter2.health -= fighter1.damagePerAttack;
+                if (fighter2.health <= 0) {
+                    break;
+                }
+                fighter1.health -= fighter2.damagePerAttack;
+                if(fighter1.health <= 0) {
+                    break;
+                }
+            }
+            return fighter1.health > fighter2.health ? fighter1.name : fighter2.name;
+        } else {
+            while(true) {
+                fighter1.health -= fighter2.damagePerAttack;
+                if(fighter1.health <= 0) {
+                    break;
+                }
+                fighter2.health -= fighter1.damagePerAttack;
+                if(fighter2.health <= 0) {
+                    break;
+                }
+            }
+            return fighter2.health > fighter1.health ? fighter2.name : fighter1.name;
+        }
     }
 
     public static void main(String[] args) {
