@@ -1,4 +1,4 @@
-package school.redrover.HW12;
+package school.redrover.HW12.Task1;
 
 public class MonthUtils {
  private static final Month JANUARY = new Month("January", 31, 17);

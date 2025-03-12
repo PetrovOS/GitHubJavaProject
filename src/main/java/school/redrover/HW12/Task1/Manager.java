@@ -1,4 +1,4 @@
-package school.redrover.HW12;
+package school.redrover.HW12.Task1;
 
 public final class Manager extends BaseEmployee {
     private final int numberOfSubordinates;
