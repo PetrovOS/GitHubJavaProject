@@ -12,12 +12,4 @@ abstract class Furniture {
     public String getInfo() {
         return "Material: " + material + ", Color: " + color;
     }
-
-    public String getMaterial() {
-        return material;
-    }
-
-    public String getColor() {
-        return color;
-    }
 }
